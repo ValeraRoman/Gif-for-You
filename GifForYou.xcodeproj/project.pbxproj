@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		32D541B625CD573900ACA8F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D541B525CD573900ACA8F3 /* AppDelegate.swift */; };
 		32D541B825CD573900ACA8F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D541B725CD573900ACA8F3 /* SceneDelegate.swift */; };
-		32D541BA25CD573900ACA8F3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D541B925CD573900ACA8F3 /* HomeViewController.swift */; };
 		32D541BF25CD574500ACA8F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D541BE25CD574500ACA8F3 /* Assets.xcassets */; };
 		32D541C225CD574500ACA8F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D541C025CD574500ACA8F3 /* LaunchScreen.storyboard */; };
 		32D541CD25CD5A0800ACA8F3 /* ExtensionUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D541CC25CD5A0800ACA8F3 /* ExtensionUiView.swift */; };
+		32D541D525CD68D000ACA8F3 /* GifCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D541D425CD68D000ACA8F3 /* GifCollectionViewCell.swift */; };
+		32D541DA25CD695C00ACA8F3 /* GifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D541D925CD695C00ACA8F3 /* GifModel.swift */; };
+		32D541E025CD73D400ACA8F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D541DF25CD73D300ACA8F3 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32D541B225CD573900ACA8F3 /* GifForYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifForYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D541B525CD573900ACA8F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32D541B725CD573900ACA8F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		32D541B925CD573900ACA8F3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		32D541BE25CD574500ACA8F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32D541C125CD574500ACA8F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32D541C325CD574500ACA8F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32D541CC25CD5A0800ACA8F3 /* ExtensionUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUiView.swift; sourceTree = "<group>"; };
+		32D541D425CD68D000ACA8F3 /* GifCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCollectionViewCell.swift; sourceTree = "<group>"; };
+		32D541D925CD695C00ACA8F3 /* GifModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifModel.swift; sourceTree = "<group>"; };
+		32D541DF25CD73D300ACA8F3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		32D541B425CD573900ACA8F3 /* GifForYou */ = {
 			isa = PBXGroup;
 			children = (
+				32D541D825CD68E400ACA8F3 /* Model */,
+				32D541D325CD643100ACA8F3 /* View */,
+				32D541D225CD642000ACA8F3 /* Controllers */,
+				32D541D125CD641400ACA8F3 /* Extension */,
 				32D541B525CD573900ACA8F3 /* AppDelegate.swift */,
 				32D541B725CD573900ACA8F3 /* SceneDelegate.swift */,
-				32D541B925CD573900ACA8F3 /* HomeViewController.swift */,
 				32D541BE25CD574500ACA8F3 /* Assets.xcassets */,
 				32D541C025CD574500ACA8F3 /* LaunchScreen.storyboard */,
 				32D541C325CD574500ACA8F3 /* Info.plist */,
-				32D541CC25CD5A0800ACA8F3 /* ExtensionUiView.swift */,
 			);
 			path = GifForYou;
+			sourceTree = "<group>";
+		};
+		32D541D125CD641400ACA8F3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				32D541CC25CD5A0800ACA8F3 /* ExtensionUiView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		32D541D225CD642000ACA8F3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				32D541DF25CD73D300ACA8F3 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		32D541D325CD643100ACA8F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32D541D425CD68D000ACA8F3 /* GifCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		32D541D825CD68E400ACA8F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32D541D925CD695C00ACA8F3 /* GifModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,10 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32D541BA25CD573900ACA8F3 /* HomeViewController.swift in Sources */,
+				32D541D525CD68D000ACA8F3 /* GifCollectionViewCell.swift in Sources */,
+				32D541DA25CD695C00ACA8F3 /* GifModel.swift in Sources */,
 				32D541B625CD573900ACA8F3 /* AppDelegate.swift in Sources */,
 				32D541CD25CD5A0800ACA8F3 /* ExtensionUiView.swift in Sources */,
 				32D541B825CD573900ACA8F3 /* SceneDelegate.swift in Sources */,
+				32D541E025CD73D400ACA8F3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
